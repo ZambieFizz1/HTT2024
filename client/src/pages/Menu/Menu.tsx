@@ -17,14 +17,14 @@ function Menu() {
           <Link to="/404">View name change information</Link>,
           <Link to="/404">Personal Emergency Contact Information</Link>,
           <span>
-            <b>Campus Card:</b> The CampusCard online services can now be
+            <b>Campus Card:</b> The HogCard online services can now be
             accessed through the{" "}
             <a href="https://wcc.carleton.ca/student/welcome.php">
               CampusCard Web Center
             </a>
           </span>,
           <Link to="/404">
-            MyCarletonOne Account information and Carleton Email address
+            Hog Rider Account information and Hog Email address
           </Link>,
           <Link to="/404">Travel Registry</Link>,
           <Link to="/404">Manage Email Communications</Link>,
@@ -34,7 +34,7 @@ function Menu() {
         ]}
       />
       <CabinetSection
-        title="Student Records"
+        title="Clan Records"
         lineItems={[
           <span>
             <b>Graduate Admissions:</b> Graduate Admissions and Graduate In-

@@ -6,5 +6,23 @@ body {
     Arial, sans-serif;
 }
 
-$theme: #e91c24;
-$theme--dark: #cc0033;
+$theme: #020220;
+$theme--dark: #2600ff;
+
+
+
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: white;
+  color: black;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(42, 19, 80);
+    color: rgb(255, 255, 255);
+  }
+}

@@ -6,10 +6,12 @@ import "./Login.style.scss";
 function Login() {
   const [message, setMessage] = useState(null);
   const { login } = useAccountContext();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const attemptLogin = async () => {
     try {
-      const message = await login("hog@rider.com", "hogcyclesucks!");
+      const message = await login(email, password);
       setMessage(message);
     } catch (error) {
       console.log(error);
@@ -34,8 +36,11 @@ function Login() {
           </div>
           {message && <p>{message}</p>}
           <div className="Login__panel__content__input">
-            <input type="text" placeholder="Hod Rider username"></input>
-            <input type="password" placeholder="Password"></input>
+            <input type="text" placeholder="Hod Rider Username" 
+                  value={email} onChange={(e) => setEmail(e.target.value)}></input>
+            <input type="password" placeholder="Password"               
+            value={password}
+              onChange={(e) => setPassword(e.target.value)}></input>
           </div>
           <div className="Login__panel__content__checkbox">
             <input type="checkbox"></input>
