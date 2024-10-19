@@ -5,13 +5,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
-  background-image: url("/carleton_background.jpg");
+  background-image: url("/COC-BG2.jpg");
   font-size: 0.9em;
 
   &__panel {
     width: 31.25rem;
     height: 100vh;
-    background-color: white;
+    background-color: rgb(234, 254, 255);
     position: fixed;
     top: 0;
     right: 0;
@@ -46,7 +46,7 @@
         font-size: 0.9em;
 
         a {
-          color: #2672ec;
+          color: #8c26ec;
           text-decoration: none;
           background-color: transparent;
           font-weight: bold;
