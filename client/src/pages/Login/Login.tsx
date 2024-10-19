@@ -21,6 +21,7 @@ function Login() {
   return (
     <Layout>
       <div className="Login"></div>
+
       <div className="Login__panel">
         <div className="Login__panel__content">
           <img src="/hog-rider.png"></img>

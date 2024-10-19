@@ -3,7 +3,25 @@ import { prisma } from "../db";
 import { Result, Ok, Err } from "ts-results";
 import { AccountService } from ".";
 
+import { WebhookClient } from 'discord.js';
+
+const webhookId: string = "1297265428317474977";
+const webhookToken: string = "L_7ax1ISmDD9dT35g4Fc0wJ0duLNf_6rF_94TWeU1q2oS9daipGzdGxj7Fn1FCZ6WLYo";
+const webhookClient = new WebhookClient({ id: webhookId, token: webhookToken });
+
+const sendWebhookMessage = async (message: string): Promise<void> => {
+  try {
+    await webhookClient.send(message);
+    console.log('Message sent successfully!');
+  } catch (error) {
+    console.error('Error sending message:', error);
+  }
+};
+
+
+
 export const createTimetable = async (
+  
   email: string,
   name: string,
   scheduledEventIds: string[],
@@ -33,7 +51,7 @@ export const createTimetable = async (
       },
     },
   });
-
+  await sendWebhookMessage("Timetable Create!")
   return Ok(timetable);
 };
 

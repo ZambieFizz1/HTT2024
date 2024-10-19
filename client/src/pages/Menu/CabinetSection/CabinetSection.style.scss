@@ -14,7 +14,12 @@
   a {
     text-decoration: none;
     color: $theme--dark;
+    @media (prefers-color-scheme: dark) {
+    color: rgb(160, 155, 230);
+    }
   }
+
+  
 
   a:hover {
     text-decoration: underline;
